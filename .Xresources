@@ -1,0 +1,15 @@
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+Urxvt.font: xft:DejaVu Sans Serif: antialias=true:pixelsize=16
+URxvt.dpi: 108
+URxvt*scrollBar: False
+URxvt*background: Black
+URxvt*foreground: Green
+URxvt*urlLauncher: /usr/bin/twabbed
+URxvt.geometry: 80x25
+URxvt.colorIT:	#87af5f
+URxvt.colorBD: 	#d7d7d7
+URxvt.colorUL: 	#87afd7
