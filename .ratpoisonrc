@@ -1,0 +1,26 @@
+# .ratpoisonrc
+
+# Borders n stuff
+set border 30
+set barpadding 0 0 0 0 
+set padding 0 0 0 0 
+set fgcolor yellow
+set bgcolor red
+
+
+escape F5
+exec xsetroot -cursor_name left_ptr
+startup_message on
+
+# Workspaces
+exec /usr/bin/rpws init 5 -k
+
+# Bind keys
+bind f exec firefox
+bind c exec gnome-terminal
+bind h focusleft
+bind l focusright
+bind j focusup
+bind k focusdown
+bind q quit
+bind e expose
