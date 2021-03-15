@@ -4,7 +4,10 @@
 curl https://eoli3n.github.io/archzfs/init | bash
 
 # partition for uefi and zfsroot on /dev/sda
-parted --script /dev/sda mklabel gpt mkpart primary esp fat32 0% 512 mkpart primary archzfs 512 100% set 1 esp on set 1 boot on
+parted -s /dev/sda mklabel gpt
+parted -s /dev/sda mkpart esp 0% 512
+parted -s /dev/sda mkpart archzfs 512 100%
+parted -s /dev/sda et 1 esp on
 
 # zfs setup
 modprobe zfs
