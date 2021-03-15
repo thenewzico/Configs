@@ -67,7 +67,7 @@ echo "archzfs-lap" > /mnt/etc/hostname
 echo "127.0.0.1		localhost \n::1			localhost \n127.0.1.1 	archzfs-lap.localdomain archzfs-lap" >> /etc/hosts
 
 # set up archzfs repo in installation
-echo "[archzfs] \nServer = https://archzfs.com/\$repo/\$arch" >> /mnt/etc/pacman.conf
+echo "\n[archzfs] \nServer = https://archzfs.com/\$repo/\$arch" >> /mnt/etc/pacman.conf
 arch-chroot /mnt pacman-key -r DDF7DB817396A49B2A2723F7403BD972F75D9D76
 arch-chroot /mnt pacman-key --lsign-key DDF7DB817396A49B2A2723F7403BD972F75D9D76
 arch-chroot /mnt pacman -S --noconfirm zfs-linux
