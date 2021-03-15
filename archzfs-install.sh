@@ -7,12 +7,12 @@ curl https://eoli3n.github.io/archzfs/init | bash
 parted -s /dev/sda mklabel gpt
 parted -s /dev/sda mkpart esp 0% 512
 parted -s /dev/sda mkpart archzfs 512 100%
-parted -s /dev/sda et 1 esp on
+parted -s /dev/sda set 1 esp on
 
 # zfs setup
 modprobe zfs
 
-zpool create -f -o ashift=12
+zpool create -f -o ashift=12 \
 -O acltype=posixacl       \
 -O relatime=on            \
 -O xattr=sa               \
